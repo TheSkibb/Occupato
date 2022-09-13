@@ -1,0 +1,16 @@
+body{
+    background: #5e78d6;
+    color: #ffffff;
+    text-align: center;
+       
+}
+
+
+.grid-item {
+    background-color: rgba(56, 56, 56, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    gap: 20px 10px;
+  }

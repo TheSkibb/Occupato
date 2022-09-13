@@ -1,0 +1,13 @@
+body{
+    margin:auto;
+    margin: 0px;
+    padding: 0px;
+    overflow:hidden;
+}
+
+.iframe{
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    text-align: center;
+}
