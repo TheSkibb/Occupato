@@ -1,7 +1,7 @@
-int ButtonValue = 0;
 int ButtonValue1 = 0;
 int ButtonValue2 = 0;
 int ButtonValue3 = 0;
+int ButtonValue4 = 0;
 
 int Button = 2;
 int Button1 = 3;
@@ -20,59 +20,61 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  ButtonValue = digitalRead(Button);
-  ButtonValue1 = digitalRead(Button1);
-  ButtonValue2 = digitalRead(Button2);
-  ButtonValue3 = digitalRead(Button3);
+  ButtonValue1 = digitalRead(Button);
+  ButtonValue2 = digitalRead(Button1);
+  ButtonValue3 = digitalRead(Button2);
+  ButtonValue4 = digitalRead(Button3);
+
+  String output = "";
 
     delay(500);
     
     //Button 0
-  if(ButtonValue != 0){
+  if(ButtonValue1 != 0){
   //if button is pressed then turn the led on
-    Serial.print(1);
+    output += 1;
     
   }
   else{
     //else the button is not pressed, turn it of
-    Serial.print(0);
+    output += 0;
   }
   
   //Button 1
-  if(ButtonValue1 != 0){
+  if(ButtonValue2 != 0){
   //if button is pressed then turn the led on
-    Serial.print(2);
+    output += 2;
     
   }
   else{
     
     //else the button is not pressed, turn it of
-    Serial.print(0);
+    output += 0;
 
   }
     //Button 2
-  if(ButtonValue2 != 0){
+  if(ButtonValue3 != 0){
   //if button is pressed then turn the led on
-    Serial.print(3);
+    output += 3;
     
   }
   else{
     
     //else the button is not pressed, turn it of
-    Serial.print(0);
+    output += 0;
   }
 
 
   //Button 3
-  if(ButtonValue3 != 0){
+  if(ButtonValue4 != 0){
   //if button is pressed then turn the led on
-    Serial.print(4);
+    output += 4;
     
   }
   else{
     //else the button is not pressed, turn it of
-    Serial.print(0);
+    output += 0;
   }
 
-  Serial.print('\n');
+  Serial.print(output + "\r\n");
 }
