@@ -1,16 +1,18 @@
 body{
-    background: #5e78d6;
+    background: #483D3F;
     color: #ffffff;
     text-align: center;
-       
+    position: relative;
 }
 
-
 .grid-item {
-    background-color: rgba(56, 56, 56, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 1ch;
+    background-color: #aca49d;
+    border: 1.5px solid #918a84;
+    width: 2ch;
     padding: 20px;
     font-size: 30px;
     text-align: center;
     gap: 20px 10px;
   }
+

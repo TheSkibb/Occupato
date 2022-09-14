@@ -1,13 +1,23 @@
 body{
-    margin:auto;
-    margin: 0px;
-    padding: 0px;
     overflow:hidden;
+    display: grid;
+    place-items: center;
+    background-color: #272635;
+}
+
+h1{
+    position: absolute;
+    bottom: 0ch;
+    right: 1ch;
+    color: #A6A6A8;
+    
 }
 
 .iframe{
     width: 95%;
-    height: 90%;
-    position: absolute;
+    height: 90vh;
     text-align: center;
-}
+    display: block;
+    border-style: none;
+    border-radius: 2ch;
+    }
