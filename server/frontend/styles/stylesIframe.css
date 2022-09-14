@@ -3,7 +3,8 @@ body{
     color: #ffffff;
     position: relative;
     display: grid;
-    grid-template-columns: 10ch 10ch;
+    grid-template-columns: 10ch 10ch 10ch 10ch;
+
 }
 
 .grid-item {
@@ -12,8 +13,7 @@ body{
     border: 1.5px solid #918a84;
     width: 2ch;
     padding: 20px;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     gap: 20px 10px;
   }
-
