@@ -1,0 +1,32 @@
+body{
+    overflow:hidden;
+    display: grid;
+    place-items: center;
+    background-color: #272635;
+}
+
+h1{
+    position: absolute;
+    bottom: 0ch;
+    right: 1ch;
+    color: #A6A6A8;
+    font-family: "comfortaa";
+    
+}
+
+h4{
+    position: absolute;
+    bottom: -2ch;
+    right: 0ch;
+    color: #A6A6A8;
+    font-family: "comfortaa";
+    
+}
+.iframe{
+    width: 95%;
+    height: 90vh;
+    text-align: center;
+    display: block;
+    border-style: none;
+    border-radius: 2ch;
+    }

@@ -1,0 +1,19 @@
+body{
+    background: #483D3F;
+    color: #ffffff;
+    position: relative;
+    display: grid;
+    grid-template-columns: 10ch 10ch;
+}
+
+.grid-item {
+    border-radius: 1ch;
+    background-color: #aca49d;
+    border: 1.5px solid #918a84;
+    width: 2ch;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    gap: 20px 10px;
+  }
+
