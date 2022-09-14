@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<meta charset="UTF-8">
+<title>Occupato</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="styles/stylesIframe.css">
+<style>
+</style>
+<script src="../backend/app.js">
+    function changeBG(){
+        var element = document.getElementById("grid-item");
+
+        if(element = 1){
+            element.style.backgroundColor = "#FF3333";
+        }
+        else{
+            element.style.backgroundColor = "#A39A92";
+        }
+    }
+
+    window.setInterval("reloadIFrame();", 3000);
+
+    function reloadIFrame() {
+    document.frames["iframehtml"].location.reload();
+    }
+</script>
+<body>
+
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+
+</body>
+</html>
