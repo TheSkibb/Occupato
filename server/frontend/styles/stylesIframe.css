@@ -1,8 +1,9 @@
 body{
     background: #483D3F;
     color: #ffffff;
-    text-align: center;
     position: relative;
+    display: grid;
+    grid-template-columns: 10ch 10ch;
 }
 
 .grid-item {
