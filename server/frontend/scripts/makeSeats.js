@@ -1,5 +1,5 @@
 var seatContainer = document.getElementById('seatContainer')
-var numberSeats = 4
+var numberSeats = 16
 var gridItem = '<div class="grid-item seatDiv">X</div>'
 document.getElementById('numberOfSeats').innerHTML = numberSeats
 for(i = 0; i < numberSeats; i++){
