@@ -1,6 +1,26 @@
 body{
     background: #483D3F;
     color: #ffffff;
+    font-family: "comfortaa";
+}
+
+.ledigeSeter{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #e8e8e8;
+    margin: 10px;
+}
+
+.ledigeSeter h1{
+    font-size: 15ch;
+}
+
+.ledigeSeter h3{
+    font-size: 3ch;
+}
+
+.grid{
     position: relative;
     display: grid;
     grid-template-columns: 10ch 10ch 10ch 10ch;
@@ -8,11 +28,11 @@ body{
 
 .grid-item {
     border-radius: 1ch;
-    background-color: #aca49d;
+    background-color: #dcd9d7;
     border: 1.5px solid #918a84;
     width: 2ch;
     padding: 20px;
     font-size: 30px;
     text-align: center;
     gap: 20px 10px;
-}
+  }
