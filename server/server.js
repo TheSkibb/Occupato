@@ -8,11 +8,21 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
-//app.use(express.static(__dirname + 
 
 app.get('/', (req, res) => {
       res.sendFile(path.join(__dirname, '/frontend/index.html'))
-      res.sendFile(path.join(__dirname, '/frontend/styles/styles.css'))
+})
+
+app.get('/seatIframe', (req, res) => {
+      res.sendFile(path.join(__dirname, 'frontend/iframehtml.html'))
+})
+
+app.get('/styles.css', (req, res) => {
+      res.sendFile(path.join(__dirname, '/frontend/styles.css'))
+})
+
+app.get('/stylesIframe.css', (req, res) => {
+      res.sendFile(path.join(__dirname, '/frontend/stylesIframe.css'))
 })
 
 app.listen(port, () => {
