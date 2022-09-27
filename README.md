@@ -1,2 +1,5 @@
-# IS-311-Occupato
-This is a project for a monitoring seats.
+# IS-311-Occupato - smart sitting
+Our project will solve the problem which several students encounters on a daily basis when entering a lecture hall, library, reading hall or similar places containing a large amount of seats. This is the problem of finding a free seat to sit without needing to walk through the entire library or reading hall to find one. By using our IoT solution, Occupato, the student are able to get the information via a screen at the entrance to the room or through a website on their phone. This data will be made available for the administrative personnel of the areas (reading halls/libraries), which will let them get information about when there are a lot of foot traffi, which in turn will enable them to create an analysis of when they have a lot of students reading at their premises and where they like to sit. This technology could also have several other use cases, such as public transport and offices. 
+
+We aim to create two different solutions which can be used in many different settings and configurations. The solutions will be one wired and one wireless, opening the possibility to expand the solution beyond fixed seats. Other situations include buses, subways and trains.
+
