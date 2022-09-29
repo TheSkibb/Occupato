@@ -8,7 +8,8 @@ const parser = port.pipe(new ReadlineParser({ delimiter: '\n' }))
 parser.on('data', await sendLog)
 
 async function sendLog(data){
-  data = Array.from(data)
+  data = Array.from(data.(0, data.length - 1))
+  console.log(data)
 }
 
 async function postSeats(inputSeats){
