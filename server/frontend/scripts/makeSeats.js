@@ -31,9 +31,13 @@ function updateSeats(seatStatus){
     if(seatStatus[i] == 0){
       seats[i].style.background = '#dcd9d7'
     }
-    else{
+    else if(seatStatus[i] == 1){
       seats[i].style.background = 'blue'
       availableSeats ++
+    }
+    else{
+      seats[i].style.background = 'red'
+      console.log(seatStatus[i])
     }
   }
   document.getElementById('availableSeats').innerHTML = availableSeats + '/'
