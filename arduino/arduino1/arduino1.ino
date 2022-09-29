@@ -32,48 +32,48 @@ void loop() {
     //Button 0
   if(ButtonValue1 != 0){
   //if button is pressed then turn the led on
-    output += 1;
+    output += 0;
     
   }
   else{
     //else the button is not pressed, turn it of
-    output += 0;
+    output += 1;
   }
   
   //Button 1
   if(ButtonValue2 != 0){
   //if button is pressed then turn the led on
-    output += 2;
+    output += 0;
     
   }
   else{
     
     //else the button is not pressed, turn it of
-    output += 0;
+    output += 1;
 
   }
     //Button 2
   if(ButtonValue3 != 0){
   //if button is pressed then turn the led on
-    output += 3;
+    output += 0;
     
   }
   else{
     
     //else the button is not pressed, turn it of
-    output += 0;
+    output += 1;
   }
 
 
   //Button 3
   if(ButtonValue4 != 0){
   //if button is pressed then turn the led on
-    output += 4;
+    output += 0;
     
   }
   else{
     //else the button is not pressed, turn it of
-    output += 0;
+    output += 1;
   }
 
   Serial.print(output + "\r\n");

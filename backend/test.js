@@ -9,7 +9,7 @@ function main(){
 }
 
 async function runTest(seatNumber){
-  seatNumber = 4
+  seatNumber = 16
   var seats = []
   for(var i = 0; i < seatNumber; i++){
     var seatStatus = Math.floor(Math.random() * 2)
@@ -26,7 +26,7 @@ async function postSeats(inputSeats){
   }
   )
   .then(function (response) {
-    console.log(response.data);
+    //console.log(response.data);
   })
   .catch(function (error) {
     console.log(error);
