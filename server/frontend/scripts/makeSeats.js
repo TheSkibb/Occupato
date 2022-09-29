@@ -28,7 +28,7 @@ function updateSeats(seatStatus){
   const seats = document.getElementsByClassName('seatDiv')
   var availableSeats = 0
   for(i = 0; i < seats.length; i++){
-    if(seatStatus[i] === 0){
+    if(seatStatus[i] == 0){
       seats[i].style.background = '#dcd9d7'
     }
     else{
