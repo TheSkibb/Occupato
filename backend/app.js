@@ -5,7 +5,7 @@ const { ReadlineParser } = require('@serialport/parser-readline')
 const port = new SerialPort({ path: '/dev/ttyACM0', baudRate: 9600 })
 
 const parser = port.pipe(new ReadlineParser({ delimiter: '\n' }))
-parser.on('data', await sendLog)
+parser.on('data', sendLog)
 
 async function sendLog(data){
   data = Array.from(data.(0, data.length - 1))
