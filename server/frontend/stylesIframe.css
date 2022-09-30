@@ -29,10 +29,11 @@ body{
 .grid-item {
     border-radius: 1ch;
     background-color: #dcd9d7;
-    border: 1.5px solid #918a84;
+    border: 2px solid rgba(52, 52, 52, 0.25);
     width: 2ch;
     padding: 20px;
     font-size: 30px;
     text-align: center;
-    gap: 20px 10px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 5px 15px;
   }
