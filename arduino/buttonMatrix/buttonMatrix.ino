@@ -4,9 +4,9 @@ int outputValue3 = 0;
 int outputValue4 = 0;
 
 int inputValue1 = 0;
-int inputValue1 = 0;
-int inputValue1 = 0;
-int inputValue1 = 0;
+int inputValue2 = 0;
+int inputValue3 = 0;
+int inputValue4 = 0;
 
 int output1 = 8;
 int output2 = 9;
@@ -14,9 +14,9 @@ int output3 = 10;
 int output4 = 11;
 
 int input1 = 2;
-int input1 = 3;
-int input1 = 4;
-int input1 = 5;
+int input2 = 3;
+int input3 = 4;
+int input4 = 5;
 
 void setup() {
   // put your setup code here, to run once:
