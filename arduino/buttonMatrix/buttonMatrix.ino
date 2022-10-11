@@ -33,44 +33,38 @@ void setup() {
 }
 
 // put your setup code here, to run once:
-  
-
-  void test() {
-    
-  }
 
  int inputs[]= {input1, input2, input3, input4};
  int outputs[]= {output1, output2, output3, output4};
 
  String getStatus(){
-   String status = "";
-   for(int i = 0; i < sizeof(outputs); i++){
-     String columnStatus = checkColumn(outputs[i]);
-     status += columnStatus;
+   String seatStatus = "";
+   for(int i = 0; i < sizeof(outputs)/2; i++){
+     String columnStatus = checkRows(outputs[i]);
+     seatStatus += columnStatus;
    }
-   return status;
+   return seatStatus;
  }
- String checkColumn(int column){
-   String status = "";
-   digitalWrite(column, 1);
-   for(int i = 0; i < sizeof(inputs); i++){
-     int rowStatus = digitalRead(inputs[i]);
-     if(rowStatus != 0){
-       status += 1;
-     }
-     else{
-       status += 0;
-     }
-     return status;
-   }
- }
-  String checkRow(int row){
+
+  String checkRows(int column){
+    String seatStatus = "";
+    for(int i = 0; i < sizeof(inputs)/2; i++){
+      int buttonStatus = digitalRead(inputs[i]);
+        if(buttonStatus != 0){
+        seatStatus += 1;
+      }
+      else{
+        seatStatus += 0;
+      }
+    }
+    return seatStatus;
  }
 
  void loop() {
   // put your main code here, to run repeatedly:
   delay(500);
-  //String status = getStatus();
+  String seatStatus = getStatus();
   String output = "";
+  output+=seatStatus;
   Serial.print(output + "\r\n");
 }
