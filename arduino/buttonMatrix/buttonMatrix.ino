@@ -19,7 +19,6 @@ int input3 = 4;
 int input4 = 5;
 
 void setup() {
-  // put your setup code here, to run once:
   pinMode(input1, INPUT);
   pinMode(input2, INPUT);
   pinMode(input3, INPUT);
@@ -30,42 +29,48 @@ void setup() {
   pinMode(output3, INPUT);
   pinMode(output4, INPUT);
 
-  int inputs[]= {input1, input2, input3, input4}
-  int outputs[]= {output1, output2, output3, output4}
-
-  String getStatus(){
-    String status = "";
-    for(int i = 0; i < sizeOf(outputs); i++){
-      columnStatus = checkColumn(outputs[i]);
-      status += columnStatus;
-    }
-    return status;
-  }
-  String checkColumn(int column){
-    String status = "";
-    digitalWrite(column);
-    for(int i = 0; i < sizeOf(inputs)){
-      rowStatus = digitalRead();
-      if(rowStatus != 0){
-        status += 1;
-      }
-      else{
-        status += 0;
-      }
-      return status;
-    }
-  }
-
-  String checkRow(int row){
-  }
-
   Serial.begin(9600);
 }
 
-void loop() {
+// put your setup code here, to run once:
+  
+
+  void test() {
+    
+  }
+
+ int inputs[]= {input1, input2, input3, input4};
+ int outputs[]= {output1, output2, output3, output4};
+
+ String getStatus(){
+   String status = "";
+   for(int i = 0; i < sizeof(outputs); i++){
+     String columnStatus = checkColumn(outputs[i]);
+     status += columnStatus;
+   }
+   return status;
+ }
+ String checkColumn(int column){
+   String status = "";
+   digitalWrite(column, 1);
+   for(int i = 0; i < sizeof(inputs); i++){
+     int rowStatus = digitalRead(inputs[i]);
+     if(rowStatus != 0){
+       status += 1;
+     }
+     else{
+       status += 0;
+     }
+     return status;
+   }
+ }
+  String checkRow(int row){
+ }
+
+ void loop() {
   // put your main code here, to run repeatedly:
-  delay(500)
-  string status = getStatus();
+  delay(500);
+  //String status = getStatus();
   String output = "";
   Serial.print(output + "\r\n");
 }
