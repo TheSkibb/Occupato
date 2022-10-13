@@ -1,10 +1,15 @@
-const path = require('path')
-const express = require('express')
+import mongoose from 'mongoose'
+
+import {testValue} from './db.js'
+
+import path from 'path'
+import express from 'express'
+import bodyparser  from 'body-parser'
 const app = express()
 const port = 3000
 
 var retults = [] 
-var bodyParser = require('body-parser');
+var bodyParser = bodyparser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
