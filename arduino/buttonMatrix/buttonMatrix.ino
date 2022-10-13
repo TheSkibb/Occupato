@@ -8,15 +8,15 @@ int inputValue2 = 0;
 int inputValue3 = 0;
 int inputValue4 = 0;
 
-int output1 = 8;
-int output2 = 9;
-int output3 = 10;
-int output4 = 11;
+int output1 = 2;
+int output2 = 3;
+int output3 = 4;
+int output4 = 5;
 
-int input1 = 2;
-int input2 = 3;
-int input3 = 4;
-int input4 = 5;
+int input1 = 8;
+int input2 = 9;
+int input3 = 10;
+int input4 = 11;
 
 void setup() {
   pinMode(input1, INPUT);
@@ -24,41 +24,65 @@ void setup() {
   pinMode(input3, INPUT);
   pinMode(input4, INPUT);
 
-  pinMode(output1, INPUT);
-  pinMode(output2, INPUT);
-  pinMode(output3, INPUT);
-  pinMode(output4, INPUT);
+  pinMode(output1, OUTPUT);
+  pinMode(output2, OUTPUT);
+  pinMode(output3, OUTPUT);
+  pinMode(output4, OUTPUT);
 
   Serial.begin(9600);
 }
 
-// put your setup code here, to run once:
+String getStatus(){
 
- int inputs[]= {input1, input2, input3, input4};
- int outputs[]= {output1, output2, output3, output4};
+  String output = "";
 
- String getStatus(){
-   String seatStatus = "";
-   for(int i = 0; i < sizeof(outputs)/2; i++){
-     String columnStatus = checkRows(outputs[i]);
-     seatStatus += columnStatus;
-   }
-   return seatStatus;
- }
+  delay(10);
+  output += checkColumn(output1);
+  delay(10);
+  output += checkColumn(output2);
+  delay(10);
+  output += checkColumn(output3);
+  delay(10);
+  output += checkColumn(output4);
+  
+  return output;
+}
 
-  String checkRows(int column){
-    String seatStatus = "";
-    for(int i = 0; i < sizeof(inputs)/2; i++){
-      int buttonStatus = digitalRead(inputs[i]);
-        if(buttonStatus != 0){
-        seatStatus += 1;
-      }
-      else{
-        seatStatus += 0;
-      }
-    }
-    return seatStatus;
- }
+String checkColumn(int column){
+  digitalWrite(column, HIGH);
+  int inp1 = digitalRead(input1);
+  int inp2 = digitalRead(input2);
+  int inp3 = digitalRead(input3);
+  int inp4 = digitalRead(input4);
+  String output = "";
+  
+  if(inp1 != 0){
+    output += 1;
+  }
+  else{
+    output += 0;
+  }
+  if(inp2 != 0){
+    output += 1;
+  }
+  else{
+    output += 0;
+  }
+  if(inp3 != 0){
+    output += 1;
+  }
+  else{
+    output += 0;
+  }
+  if(inp4 != 0){
+    output += 1;
+  }
+  else{
+    output += 0;
+  }
+  digitalWrite(column, LOW);
+  return output;
+}
 
  void loop() {
   // put your main code here, to run repeatedly:
