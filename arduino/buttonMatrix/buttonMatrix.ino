@@ -24,10 +24,10 @@ void setup() {
   pinMode(input3, INPUT);
   pinMode(input4, INPUT);
 
-  pinMode(output1, INPUT);
-  pinMode(output2, INPUT);
-  pinMode(output3, INPUT);
-  pinMode(output4, INPUT);
+  pinMode(output1, OUTPUT);
+  pinMode(output2, OUTPUT);
+  pinMode(output3, OUTPUT);
+  pinMode(output4, OUTPUT);
 
   Serial.begin(9600);
 }
