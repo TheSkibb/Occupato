@@ -1,9 +1,8 @@
 var seatContainer = document.getElementById('seatContainer')
 var numberSeats = 16
-var gridItem = '<div class="grid-item seatDiv">X</div>'
 document.getElementById('numberOfSeats').innerHTML = numberSeats
 for(i = 0; i < numberSeats; i++){
-  seatContainer.innerHTML += gridItem 
+  seatContainer.innerHTML += '<div class="grid-item seatDiv" id="seatNumber' + (i +1) + '">' + (i+1) +'</div>'
 }
 
 var seatStatus
@@ -25,7 +24,7 @@ function getSeats(){
 }
 
 function updateSeats(seatStatus){
-  const seats = document.getElementsByClassName('seatDiv')
+  var seats = document.getElementsByClassName('seatDiv')
   var availableSeats = 0
   for(i = 0; i < seats.length; i++){
     if(seatStatus[i] == 0){
